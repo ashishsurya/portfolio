@@ -1,15 +1,39 @@
 ---
+import { Header } from '../components/header';
+import { Tagline } from '../components/tagline';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <!-- manrope font -->
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap'
+      rel='stylesheet'
+    />
+    <!-- font -->
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Surya Ashish</title>
+
+    <style>
+      body {
+        font-family: 'Manrope', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='max-w-5xl mx-auto flex flex-col items-center gap-5'>
+      <Header />
+      <img
+        src='/dp.jpeg'
+        alt=''
+        class='w-32 md:w-40 aspect-square mx-auto rounded-full mt-5'
+      />
+      <Tagline />
+    </div>
+  </body>
 </html>
