@@ -1,6 +1,8 @@
 ---
 import { Header } from '../components/header';
 import { Tagline } from '../components/tagline';
+import { Projects } from '../components/projects';
+import { OpenSource } from '../components/open-source';
 ---
 
 <html lang='en'>
@@ -34,6 +36,10 @@ import { Tagline } from '../components/tagline';
         class='w-32 md:w-40 aspect-square mx-auto rounded-full mt-5'
       />
       <Tagline />
+			<div class="grid grid-cols-1 md:grid-cols-2 w-full gap-10 pt-10">
+				<Projects />
+				<OpenSource />
+			</div>
     </div>
   </body>
 </html>
