@@ -9,7 +9,7 @@ const contributions = [
     id: 1,
     repo: 'react-haiku',
     pullRequestLink: 'https://github.com/DavidHDev/react-haiku/pull/36',
-    className: 'bg-black',
+    description : "Added a react hook for observing the dimensions of a react component."
   },
 ];
 
@@ -18,12 +18,7 @@ export const OpenSource: FC<OpenSourceProps> = ({}) => {
     <Section title='Open Source'>
       <div className='grid grid-cols-1 gap-5'>
         {contributions.map((c) => (
-          <Card
-            link={c.pullRequestLink}
-            key={c.id}
-            name={c.repo}
-            className={c.className}
-          />
+          <Card link={c.pullRequestLink} key={c.id} name={c.repo} description={c.description}/>
         ))}
       </div>
     </Section>

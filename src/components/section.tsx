@@ -12,7 +12,7 @@ export const Section = ({
   React.HTMLAttributes<HTMLDivElement>) => {
   return (
     <div className={twMerge(className, 'w-full px-5')}>
-      <h3 className='text-2xl md:text-3xl font-bold pb-5'>{title}</h3>
+      <h3 className='text-2xl md:text-3xl font-bold pb-5 text-slate-700'>{title}</h3>
       {children}
     </div>
   );

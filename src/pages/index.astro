@@ -3,6 +3,7 @@ import { Header } from '../components/header';
 import { Tagline } from '../components/tagline';
 import { Projects } from '../components/projects';
 import { OpenSource } from '../components/open-source';
+import { Work } from '../components/work';
 ---
 
 <html lang='en'>
@@ -23,7 +24,11 @@ import { OpenSource } from '../components/open-source';
 
     <style>
       body {
-        font-family: 'Manrope', sans-serif;
+        @font-face {
+          font-family: 'Helvetica Neue';
+          src: url('/fonts/helveticaneue.woff2');
+        }
+        font-family: 'Helvetica Neue';
       }
     </style>
   </head>
@@ -31,15 +36,16 @@ import { OpenSource } from '../components/open-source';
     <div class='max-w-5xl mx-auto flex flex-col items-center gap-5'>
       <Header />
       <img
-        src='/dp.jpeg'
+        src='/dp.webp'
         alt=''
-        class='w-32 md:w-40 aspect-square mx-auto rounded-full mt-5'
+        class='w-32 md:w-40 aspect-square mx-auto rounded-full mt-5 object-cover'
       />
       <Tagline />
-			<div class="grid grid-cols-1 md:grid-cols-2 w-full gap-10 pt-10">
-				<Projects />
-				<OpenSource />
-			</div>
+      <Work />
+      <div class='grid grid-cols-1 md:grid-cols-2 w-full gap-10 pt-10'>
+        <Projects />
+        <OpenSource />
+      </div>
     </div>
   </body>
 </html>
